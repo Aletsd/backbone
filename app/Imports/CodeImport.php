@@ -39,7 +39,7 @@ class CodeImport implements OnEachRow, WithHeadingRow, WithBatchInserts
 
         $locality = Locality::firstOrCreate([
             'zip_code' => $row['d_codigo'],
-            'locality' => strtoupper($row['d_ciudad']),
+            'locality' => $row['d_ciudad'] != Null ? strtoupper($row['d_ciudad']) : "",
             'state_id' => $state->id,
             'municipality_id' => $municipality -> id
         ]);
@@ -48,7 +48,7 @@ class CodeImport implements OnEachRow, WithHeadingRow, WithBatchInserts
             'name' => $row['d_tipo_asenta']
         ]);
 
-        $settlement = Settlement::firstOrCreate([
+        $settlement = Settlement::create([
             'key' => $row['id_asenta_cpcons'],
             'name' => strtoupper($row['d_asenta']),
             'zone_type' => strtoupper($row['d_zona']),

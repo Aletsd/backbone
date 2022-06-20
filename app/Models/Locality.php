@@ -10,12 +10,12 @@ class Locality extends Model
     use HasFactory;
     protected $guarded = [];
 
-    //protected $fillable = ['zip_code', 'locality'];
 
+    //protected $appends = ['created_at', 'updated_at'];
 
     public function federal_entity()
     {
-        return $this->hasOne(State::class, 'id', 'state_id');
+        return $this->belongsTo(State::class, 'state_id', 'id');
     }
 
     public function settlements()

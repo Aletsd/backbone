@@ -15,7 +15,7 @@ class CodesImport implements WithMultipleSheets, SkipsUnknownSheets
     {
         return [
             'Aguascalientes' => new CodeImport(),
-            'Baja_California' => new CodeImport(),/*
+            'Baja_California' => new CodeImport(),
             'Baja_California_Sur' => new CodeImport(),
             'Campeche' => new CodeImport(),
             'Coahuila_de_Zaragoza' => new CodeImport(),
@@ -45,7 +45,7 @@ class CodesImport implements WithMultipleSheets, SkipsUnknownSheets
             'Tlaxcala' => new CodeImport(),
             'Veracruz_de_Ignacio_de_la_Llave' => new CodeImport(),
             'Yucatán' => new CodeImport(),
-            'Zacatecas' => new CodeImport()*/
+            'Zacatecas' => new CodeImport()
         ];
     }
 

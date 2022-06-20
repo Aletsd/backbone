@@ -15,7 +15,6 @@ class CreateCodesTable extends Migration
     {
         Schema::create('codes', function (Blueprint $table) {
             $table->id();
-            $table->integer('d_codigo');
             $table->string('d_asenta')->nullable();
             $table->string('d_tipo_asenta')->nullable();
             $table->string('D_mnpio')->nullable();
